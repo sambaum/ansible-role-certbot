@@ -1,4 +1,15 @@
 ---
+- name: install software-properties-common
+  package:
+    name: software-properties-common
+
+- name: add the Certbot PPA
+  apt_repository:
+    repo: "{{ item }}"
+    state: present
+  with_items:
+    - ppa:certbot/certbot
+
 - name: Install Certbot.
   package: "name={{ certbot_package }} state=present"
 
