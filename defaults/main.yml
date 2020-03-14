@@ -6,6 +6,12 @@ certbot_auto_renew_hour: "3"
 certbot_auto_renew_minute: "30"
 certbot_auto_renew_options: "--quiet --no-self-upgrade"
 
+install_python_certbot_dns_cloudflare: false
+dns_cloudflare_ini_location: /etc/letsencrypt/
+dns_cloudflare_ini_permissions_owner: root
+dns_cloudflare_ini_permissions_group: root
+dns_cloudflare_ini_permissions_mode: 0600
+
 # Parameters used when creating new Certbot certs.
 certbot_create_if_missing: false
 certbot_create_method: standalone

@@ -7,6 +7,9 @@
 - import_tasks: install-from-source.yml
   when: certbot_install_from_source
 
+- import_tasks: python-certbot-dns-cloudflare.yml
+  when: install_python_certbot_dns_cloudflare
+
 - include_tasks: create-cert-standalone.yml
   with_items: "{{ certbot_certs }}"
   when:
