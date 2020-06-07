@@ -9,6 +9,7 @@
     state: present
   with_items:
     - ppa:certbot/certbot
+  when: ansible_distribution_version != "20.04"
 
 - name: Install Certbot.
   package: "name={{ certbot_package }} state=present"
