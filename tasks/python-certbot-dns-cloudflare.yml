@@ -3,7 +3,7 @@
 
 # Note:
 # The python package "certbot-dns-cloudflare" will be
-# installed via the variable "python_install" defined in vars
+# installed via dependencies (meta)
 
 - name: Create directory "{{ dns_cloudflare_ini_location }}"
   file:
