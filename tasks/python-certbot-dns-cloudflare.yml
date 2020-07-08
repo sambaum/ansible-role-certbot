@@ -22,3 +22,7 @@
      owner: "{{ dns_cloudflare_ini_permissions_owner }}"
      group: "{{ dns_cloudflare_ini_permissions_group }}"
      mode: "{{ dns_cloudflare_ini_permissions_mode }}"
+
+- name: Set Certbot script variable (certbot via pip)
+  set_fact:
+    certbot_script: "/usr/local/bin/certbot"
