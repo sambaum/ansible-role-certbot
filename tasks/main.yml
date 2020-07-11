@@ -2,7 +2,7 @@
 - import_tasks: include-vars.yml
 
 - import_tasks: install-with-package.yml
-  when: not certbot_install_from_source
+  when: not certbot_install_from_source and not install_python_certbot_dns_cloudflare
 
 - import_tasks: install-from-source.yml
   when: certbot_install_from_source
